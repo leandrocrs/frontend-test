@@ -1,5 +1,97 @@
 body {
-  text-align: center;
-  font-size: 12px;
-  font-family: "Arial, sans-serif";
-}
+  background: #272727;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px; }
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+.brand {
+  left: -35px;
+  position: absolute;
+  top: 55px;
+  z-index: 1; }
+
+.header-container {
+  background: white;
+  border-radius: 3px;
+  display: inline-block;
+  margin-top: 180px;
+  line-height: 52px;
+  margin-left: 95px;
+  padding-left: 80px;
+  width: 247px;
+  box-sizing: border-box; }
+
+.page-title {
+  margin: 0px;
+  text-transform: uppercase; }
+
+#ranking {
+  margin: 50px auto 0px;
+  width: 342px;
+  position: relative; }
+  #ranking .farmer-info {
+    display: inline-block;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 8px; }
+  #ranking .ranking-list {
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    list-style: none;
+    padding: 5px 0;
+    width: 100%; }
+    #ranking .ranking-list ol {
+      display: inline-block;
+      padding: 9px 15px;
+      height: 82px;
+      margin: 4px 0;
+      box-sizing: border-box;
+      vertical-align: top;
+      width: 100%; }
+      #ranking .ranking-list ol:nth-child(even) {
+        background: #f2f1f1; }
+      #ranking .ranking-list ol:hover {
+        background: #ba3638;
+        cursor: pointer; }
+
+.farmer-name,
+.farmer-description {
+  margin: 0; }
+
+.farmer-name {
+  color: #ba3638;
+  vertical-align: top; }
+  .ranking-list ol:hover .farmer-name {
+    color: white; }
+
+.farmer-description {
+  color: #909090;
+  display: inline-block; }
+  .ranking-list ol:hover .farmer-description {
+    color: #330d0e; }
+
+.farm-avatar {
+  border: #ba3638 4px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 65px;
+  overflow: hidden;
+  width: 65px; }
+  .farm-avatar img {
+    height: 100%;
+    width: 100%; }
+  .ranking-list ol:hover .farm-avatar {
+    border-color: white; }

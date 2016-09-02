@@ -1,0 +1,22 @@
+{
+  "name": "R7FrontendTest",
+  "description": "",
+  "main": "",
+  "authors": [
+    "leandrw <contato@leandrw.com.br>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/leandrw/frontend-test",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "normalize-css": "normalize.css#^4.2.0"
+  }
+}

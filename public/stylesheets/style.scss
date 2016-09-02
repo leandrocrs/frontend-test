@@ -1,0 +1,132 @@
+$backgroundColor: #272727;
+$red: #ba3638;
+$darkRed: #330d0e;
+$grey: #f2f1f1;
+$darkGrey: #909090;
+
+body {
+  background: $backgroundColor;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+}
+
+// clearfix
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+.brand {
+  left: -35px;
+  position: absolute;
+  top: 55px;
+  z-index: 1;
+}
+
+.header-container {
+    background: white;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 180px;
+    line-height: 52px;
+    margin-left: 95px;
+    padding-left: 80px;
+    width: 247px;
+    box-sizing: border-box;
+}
+
+.page-title {
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+#ranking {
+  margin: 50px auto 0px;
+  width: 342px;
+  position: relative;
+
+  .farmer-info {
+    display: inline-block;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 8px;
+  }
+
+  .ranking-list {
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    list-style: none;
+    padding: 5px 0;
+    width: 100%;
+
+    ol {
+      display: inline-block;
+      padding: 9px 15px;
+      height: 82px;
+      margin: 4px 0;
+      box-sizing: border-box;
+      vertical-align: top;
+      width: 100%;
+
+      &:nth-child(even){
+        background: $grey;
+      }
+
+      &:hover {
+        background: $red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.farmer-name,
+.farmer-description {
+  margin: 0;
+}
+
+.farmer-name {
+  color: $red;
+  vertical-align: top;
+
+  .ranking-list ol:hover & {
+    color: white;
+  }
+}
+
+.farmer-description {
+  color: $darkGrey;
+  display: inline-block;
+
+  .ranking-list ol:hover & {
+    color: $darkRed;
+  }
+}
+
+.farm-avatar {
+  border: $red 4px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 65px;
+  overflow: hidden;
+  width: 65px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .ranking-list ol:hover & {
+    border-color: white;
+  }
+}

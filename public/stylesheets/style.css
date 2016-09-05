@@ -32,11 +32,12 @@ body {
   box-sizing: border-box; }
 
 .page-title {
+  font-size: 1.875em;
   margin: 0px;
   text-transform: uppercase; }
 
 #ranking {
-  margin: 50px auto 0px;
+  margin: 0 auto;
   width: 342px;
   position: relative; }
   #ranking .farmer-info {
@@ -63,8 +64,7 @@ body {
       #ranking .ranking-list ol:nth-child(even) {
         background: #f2f1f1; }
       #ranking .ranking-list ol:hover {
-        background: #ba3638;
-        cursor: pointer; }
+        background: #ba3638; }
 
 .farmer-name,
 .farmer-description {
@@ -72,26 +72,83 @@ body {
 
 .farmer-name {
   color: #ba3638;
+  font-weight: normal;
+  font-size: 1.125em;
+  line-height: 1.2;
   vertical-align: top; }
   .ranking-list ol:hover .farmer-name {
     color: white; }
 
 .farmer-description {
   color: #909090;
-  display: inline-block; }
+  display: inline-block;
+  font-size: 0.75em; }
   .ranking-list ol:hover .farmer-description {
     color: #330d0e; }
 
-.farm-avatar {
+.farmer-avatar {
   border: #ba3638 4px solid;
   border-radius: 50%;
+  box-shadow: 1px;
   box-sizing: border-box;
   display: inline-block;
   height: 65px;
   overflow: hidden;
   width: 65px; }
-  .farm-avatar img {
+  .farmer-avatar img {
+    height: 100%; }
+  .ranking-list ol:hover .farmer-avatar {
+    border-color: white; }
+
+.popover {
+  background: #f8f7f7;
+  border-radius: 5px;
+  display: block;
+  height: 50px;
+  margin-top: -64px;
+  right: -175px;
+  position: absolute;
+  width: 155px; }
+  .ranking-list ol:hover .popover {
+    display: block; }
+  .popover table {
+    border: none;
     height: 100%;
     width: 100%; }
-  .ranking-list ol:hover .farm-avatar {
-    border-color: white; }
+    .popover table td {
+      padding: 1px; }
+
+.popover-header {
+  background: #ba3638;
+  color: white;
+  font-size: .625em;
+  height: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle; }
+
+.popover-value {
+  color: #909090;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle; }
+
+.popover-arrow {
+  background: transparent url("/assets/arrow.png");
+  height: 19px;
+  left: -11px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+  width: 11px; }
+
+@media screen and (max-width: 420px) {
+  .brand {
+    left: 0; }
+  .header-container {
+    padding-left: 90px; }
+  #ranking {
+    margin-top: 0; } }

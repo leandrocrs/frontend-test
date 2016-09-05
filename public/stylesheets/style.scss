@@ -1,6 +1,7 @@
 $backgroundColor: #272727;
 $red: #ba3638;
 $darkRed: #330d0e;
+$lightGrey: #f8f7f7;
 $grey: #f2f1f1;
 $darkGrey: #909090;
 
@@ -43,12 +44,13 @@ body {
 }
 
 .page-title {
+  font-size: 1.875em;
   margin: 0px;
   text-transform: uppercase;
 }
 
 #ranking {
-  margin: 50px auto 0px;
+  margin: 0 auto;
   width: 342px;
   position: relative;
 
@@ -83,7 +85,6 @@ body {
 
       &:hover {
         background: $red;
-        cursor: pointer;
       }
     }
   }
@@ -96,6 +97,9 @@ body {
 
 .farmer-name {
   color: $red;
+  font-weight: normal;
+  font-size: 1.125em;
+  line-height: 1.2;
   vertical-align: top;
 
   .ranking-list ol:hover & {
@@ -106,15 +110,17 @@ body {
 .farmer-description {
   color: $darkGrey;
   display: inline-block;
+  font-size: 0.75em;
 
   .ranking-list ol:hover & {
     color: $darkRed;
   }
 }
 
-.farm-avatar {
+.farmer-avatar {
   border: $red 4px solid;
   border-radius: 50%;
+  box-shadow: 1px;
   box-sizing: border-box;
   display: inline-block;
   height: 65px;
@@ -123,10 +129,80 @@ body {
 
   img {
     height: 100%;
-    width: 100%;
   }
 
   .ranking-list ol:hover & {
     border-color: white;
+  }
+}
+
+.popover {
+  background: $lightGrey;
+  border-radius: 5px;
+  display: block;
+  height: 50px;
+  margin-top: -64px;
+  right: -175px;
+  position: absolute;
+  width: 155px;
+
+  .ranking-list ol:hover & {
+    display: block;
+  }
+
+  table {
+    border: none;
+    height: 100%;
+    width: 100%;
+
+    td {
+      padding: 1px;
+    }
+  }
+}
+
+.popover-header {
+  background: $red;
+  color: white;
+  font-size: .625em;
+  height: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.popover-value {
+  color: $darkGrey;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.popover-arrow {
+  background: transparent url('/assets/arrow.png');
+  height: 19px;
+  left: -11px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+  width: 11px;
+}
+
+
+@media screen and (max-width: 420px) {
+
+  .brand {
+    left: 0;
+  }
+
+  .header-container {
+    padding-left: 90px;
+  }
+
+  #ranking {
+    margin-top: 0;
   }
 }

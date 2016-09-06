@@ -37,9 +37,10 @@
       <picture class="farmer-avatar">
         <img src="{{ picture }}">
       </picture>
+      <label class="farmer-order">{{ orderIndex @index }}</label>
       <header class="farmer-info">
         <h1 class="farmer-name">{{ name }}</h1>
-        <p class="farmer-description">{{ description }}</p>
+        <p class="farmer-description">{{ htmlEscape description }}</p>
       </header>
       <label class="popover">
         <div class="popover-arrow"></div>
@@ -52,8 +53,8 @@
           </thead>
           <tbody>
             <tr class="popover-value">
-              <td>37%</td>
-              <td>67%</td>
+              <td>{{positivePercent}}%</td>
+              <td>{{negativePercent}}%</td>
             </tr>
           </tbody>
         </table>

@@ -39,7 +39,7 @@ var Farmers = Backbone.Collection.extend({
 
 // View
 var FarmersView = Backbone.View.extend({
-  tagName: 'ul',
+  tagName: 'ol',
   className: 'ranking-list',
   initialize: function () {
     this.collection;

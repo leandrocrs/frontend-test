@@ -1,3 +1,5 @@
 /node_modules
+/public/components
+/public/stylesheets/*.css
 npm-debug.log
 *.swp

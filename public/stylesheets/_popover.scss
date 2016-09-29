@@ -1,0 +1,56 @@
+.popover {
+  background: $lightGrey;
+  border-radius: 5px;
+  display: block;
+  height: 50px;
+  margin-top: -64px;
+  right: -175px;
+  position: absolute;
+  opacity: 0;
+  width: 155px;
+
+  .ranking-list ol:hover & {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+  }
+
+  table {
+    border: none;
+    height: 100%;
+    width: 100%;
+
+    td {
+      padding: 1px;
+    }
+  }
+}
+
+.popover-header {
+  background: $red;
+  color: white;
+  font-size: .625em;
+  height: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.popover-value {
+  color: $darkGrey;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.popover-arrow {
+  background: transparent url('/assets/arrow.png');
+  height: 19px;
+  left: -11px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+  width: 11px;
+}

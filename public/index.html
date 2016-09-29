@@ -1,14 +1,68 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
+<html lang="pt-BR">
 
-    <title>R7 FrontEnd Test</title>
+<head>
+  <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="stylesheets/style.css" media="all">
-  </head>
-  <body>
-      <!-- let's code :D -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R7 FrontEnd Test</title>
 
-    <script src="javascripts/main.js"></script> 
+  <link rel="stylesheet" href="components/normalize-css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/style.css" media="all">
+</head>
+
+<body>
+  <section id="ranking">
+    <header>
+      <picture class="brand">
+        <img src="assets/a-fazenda-logo.png" alt="a fazenda">
+      </picture>
+      <div class="header-container">
+        <h1 class="page-title">Ranking</h1>
+      </div>
+    </header>
+    <main id="ranking-list">
+    </main>
+  </section>
+  <!--scripts-->
+  <script src="components/jquery/dist/jquery.min.js"></script>
+  <script src="components/underscore/underscore-min.js"></script>
+  <script src="components/handlebars/handlebars.min.js"></script>
+  <script src="components/backbone/backbone-min.js"></script>
+  <script id="farmers-template" type="text/x-handlebars-template">
+    {{#each farmers}}
+    <ol>
+      <picture class="farmer-avatar">
+        <img src="{{ picture }}">
+      </picture>
+      <label class="farmer-order">{{ orderIndex @index }}</label>
+      <header class="farmer-info">
+        <h1 class="farmer-name">{{ name }}</h1>
+        <p class="farmer-description">{{ htmlEscape description }}</p>
+      </header>
+      <label class="popover">
+        <div class="popover-arrow"></div>
+        <table cellpadding="0">
+          <thead class="popover-header">
+            <tr>
+              <th>Gostam</th>
+              <th>Não Gostam</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="popover-value">
+              <td>{{positivePercent}}%</td>
+              <td>{{negativePercent}}%</td>
+            </tr>
+          </tbody>
+        </table>
+      </label>
+    </ol>
+    {{/each}}
+  </script>
+  <script src="javascripts/main.js"></script>
+  <!--/scripts-->
+
 </html>

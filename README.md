@@ -1,10 +1,10 @@
-### Sobre o R7.com
+## Sobre o R7.com
 R7.com, é um portal mantido pela Rádio e Televisão Record S/A, com quase
 5 anos de vida possui 50 milhões de visitantes únicos, e 1 bilhão e meio
 de pageviews mensalmente e conta coma uma equipe de quase 500 pessoas.
 
 
-### Teste FrontEnd para o R7.com!
+## Teste FrontEnd para o R7.com!
 Essa prova consiste em testar seus conhecimentos com HTML, CSS,
 JavaScript, Linha de Comando entre outras coisas.
 Você basicamente irá desenvolver uma pequena aplicação baseada em uma
@@ -51,3 +51,25 @@ use-a!)
 
 
 <br><br><sub>Os dados presentes neste teste são totalmente fictícios.</sub>
+
+---
+# Notas de Leandrw
+
+## Dependências
+Adicionei o bower como gerenciador de dependências então, por favor, inclua o comando abaixo no setup, após o `npm install`:
+```
+bower install
+```
+
+## Sobre o Core
+Foi minha primeira experiência com BackboneJS, então tenha paciência. Me supreendi como coisas simples feitas por frameoworks como Angular.js ou libs como Vue.js simplesmente não existem ou são burocráticas demais em BackboneJS. Mas gostei do mapeamento da Model com o servidor.
+
+## Automação DAS COISAS
+Não esqueça do Gulp na sua máquina!
+Incluí alguns procedimentos no app:
+* Usando o Sass como pré-processador, para facilitar o lidar com CSS
+* Adicionado o Autoprefixer, que coloca os prefixos browser-vendor para suporte de propriedades CSS3 em browser não plenamente suportados
+* Inserido o JSHint como linter, para evitar o build de scripts com erros graves
+* Adicionada uma task watch, rodando em background, observando alterações em scripts e styles para reprocessa-los e realizar tarefas pertinentes
+* Uma tarefa chamada `serve`, que serve a aplicação
+* Se apenas rodar `gulp` ou `gulp default`, todas as tasks anteriormente citadas já serão realizadas

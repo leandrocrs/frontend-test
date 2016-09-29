@@ -9,7 +9,7 @@
   opacity: 0;
   width: 155px;
 
-  .ranking-list ol:hover & {
+  .ranking-list li:hover & {
     opacity: 1;
     transition: opacity .25s ease-in-out;
   }
